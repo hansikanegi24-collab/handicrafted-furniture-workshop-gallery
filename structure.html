@@ -1,1 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Handcrafted Furniture Workshop Gallery">
+    <title>Handcrafted Furniture Workshop Gallery</title>
 
+    <link rel="stylesheet" href="appearance.css">
+    <script src="functionality.js" defer></script>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container header-content">
+
+            <a href="#" class="logo" aria-label="Handcrafted Workshop Home">
+                <span class="logo-mark" aria-hidden="true">HW</span>
+
+                <span>
+                    <strong>Handcrafted Workshop</strong>
+                    <small>Furniture Gallery</small>
+                </span>
+            </a>
+
+            <div class="connection-status" id="connectionStatus" role="status" aria-live="polite">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span id="statusText">Online</span>
+            </div>
+
+        </div>
+    </header>
+
+
+    <main id="main-content">
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="container hero-content">
+
+                <div class="hero-text">
+                    <p class="eyebrow">HANDCRAFTED FURNITURE</p>
+
+                    <h1>
+                        Made by hand.<br>
+                        Designed to last.
+                    </h1>
+
+                    <p>
+                        Explore our collection of thoughtfully crafted furniture,
+                        created with timeless design and practical craftsmanship.
+                    </p>
+
+                    <a href="#gallery" class="button primary-button">
+                        Explore Gallery
+                    </a>
+                </div>
+
+                <div class="collection-summary">
+                    <span>OUR COLLECTION</span>
+                    <strong id="collectionCount">0 Pieces</strong>
+                    <p>Carefully crafted workshop furniture.</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- GALLERY SECTION -->
+        <section class="gallery-section" id="gallery" aria-labelledby="galleryTitle">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">THE COLLECTION</p>
+                        <h2 id="galleryTitle">Workshop Gallery</h2>
+                    </div>
+
+                    <p id="resultsSummary" aria-live="polite"></p>
+                </div>
+
+
+                <!-- SEARCH AND FILTER -->
+                <div class="toolbar">
+
+                    <div class="field">
+                        <label for="searchInput">Search furniture</label>
+
+                        <input
+                            type="search"
+                            id="searchInput"
+                            maxlength="60"
+                            placeholder="Search chair, oak, table..."
+                            autocomplete="off"
+                        >
+                    </div>
+
+
+                    <div class="field">
+                        <label for="categorySelect">Category</label>
+
+                        <select id="categorySelect">
+                            <option value="all">All Categories</option>
+                            <option value="seating">Seating</option>
+                            <option value="tables">Tables</option>
+                            <option value="storage">Storage</option>
+                        </select>
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="button secondary-button"
+                        id="clearButton"
+                    >
+                        Clear Filters
+                    </button>
+
+                </div>
+
+
+                <!-- CONNECTION WARNING -->
+                <div
+                    class="notice"
+                    id="offlineNotice"
+                    role="alert"
+                    hidden
+                >
+                    <strong>You appear to be offline.</strong>
+                    The gallery is still available using locally stored
+                    furniture information.
+                </div>
+
+
+                <!-- FURNITURE CARDS -->
+                <div
+                    class="gallery-grid"
+                    id="galleryGrid"
+                    aria-label="Furniture collection"
+                >
+                </div>
+
+
+                <!-- EMPTY STATE -->
+                <div
+                    class="empty-state"
+                    id="emptyState"
+                    hidden
+                >
+                    <div class="empty-icon" aria-hidden="true">⌕</div>
+
+                    <h3>No furniture found</h3>
+
+                    <p>
+                        We couldn't find a furniture piece matching your search.
+                        Try another keyword or category.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="button secondary-button"
+                        id="emptyClearButton"
+                    >
+                        Show All Furniture
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <div>
+                <strong>Handcrafted Workshop</strong>
+                <p>Furniture made thoughtfully, one piece at a time.</p>
+            </div>
+
+            <p>
+                © <span id="currentYear"></span> Handcrafted Workshop
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

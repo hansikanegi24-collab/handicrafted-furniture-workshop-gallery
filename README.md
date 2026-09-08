@@ -47,7 +47,7 @@ the project.
 
 ## How to Run
 
-Open `structure.html` in a modern web browser.
+Open `index.html` in a modern web browser.
 
 For best results, serve the project using a local web server.
 
@@ -56,7 +56,7 @@ For best results, serve the project using a local web server.
 ```text
 Handcrafted-Furniture-Workshop-Gallery/
 │
-├── structure.html
+├── index.html
 ├── appearance.css
 ├── functionality.js
 └── README.md

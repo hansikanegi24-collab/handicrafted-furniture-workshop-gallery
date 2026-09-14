@@ -1,23 +1,31 @@
 # Handcrafted Furniture Workshop Gallery
 
-A responsive and accessible furniture gallery website created for a
-Handcrafted Furniture Workshop.
+A responsive and accessible furniture gallery website designed to showcase handcrafted furniture in a clean and professional interface.
+
+## Project Overview
+
+The Handcrafted Furniture Workshop Gallery provides an interactive way for users to explore a collection of handcrafted furniture pieces.
+
+Users can search for furniture, filter items by category, view furniture images and descriptions, and easily navigate the gallery across different screen sizes.
 
 ## Features
 
 - Responsive furniture gallery
-- Search furniture by name, material, or category
-- Category filtering
+- Six handcrafted furniture pieces
+- Furniture images displayed using PNG files
+- Search furniture by name, material, category, or description
+- Category-based filtering
 - Clear filters option
-- Empty state when no furniture matches the search
-- Offline/poor-connectivity notification
+- Dynamic furniture card generation
+- Empty state when no matching furniture is found
+- Offline/online connectivity status
 - Keyboard-accessible navigation
 - Skip-to-content accessibility link
 - Visible keyboard focus states
 - Reduced-motion support
-- Safe rendering of content using `textContent`
-- Gallery interaction telemetry through the browser console
-- No external frameworks or CSS libraries
+- ARIA live regions for dynamic information
+- Secure DOM-based content rendering
+- Gallery interaction logging through the browser console
 
 ## Technologies Used
 
@@ -27,29 +35,68 @@ Handcrafted Furniture Workshop.
 
 ## Furniture Categories
 
-- Seating
-- Tables
-- Storage
+### Seating
+- Aster Lounge Chair
+- Ridge Armchair
+
+### Tables
+- Meadow Dining Table
+- Foundry Coffee Table
+
+### Storage
+- Workshop Sideboard
+- Hearth Bookcase
+
+## Search and Filtering
+
+The gallery provides a dynamic search and filtering system.
+
+Users can:
+
+- Search by furniture name
+- Search by material
+- Search by category
+- Search by description
+- Filter furniture by Seating, Tables, or Storage
+- Clear all filters with one click
+
+## Responsive Design
+
+The website is designed to work across:
+
+- Desktop
+- Tablet
+- Mobile devices
+
+The layout automatically adapts to smaller screen sizes using CSS media queries.
 
 ## Accessibility
 
-The project uses semantic HTML, accessible labels, keyboard navigation,
-ARIA live regions, focus indicators, and reduced-motion support.
+Accessibility was considered throughout the project.
+
+The website includes:
+
+- Semantic HTML
+- Proper form labels
+- Keyboard navigation
+- Visible focus indicators
+- Skip-to-content navigation
+- ARIA live regions
+- Accessible image alternative text
+- Reduced-motion support
 
 ## Security
 
-Furniture information is rendered using DOM text properties rather than
-injecting HTML. This helps prevent HTML/script injection if the data source
-is expanded in the future.
+Furniture information is rendered using DOM text properties instead of directly injecting HTML.
 
-No API keys, passwords, or other sensitive credentials are included in
-the project.
+This reduces the risk of unwanted HTML or script injection when displaying dynamic content.
 
-## How to Run
+The project does not contain:
 
-Open `index.html` in a modern web browser.
-
-For best results, serve the project using a local web server.
+- API keys
+- Passwords
+- Authentication credentials
+- Other sensitive information
 
 ## Project Structure
 
@@ -59,4 +106,11 @@ Handcrafted-Furniture-Workshop-Gallery/
 ├── index.html
 ├── appearance.css
 ├── functionality.js
-└── README.md
+├── README.md
+│
+├── aster.png
+├── meadow.png
+├── sideboard.png
+├── ridge.png
+├── foundry.png
+└── hearth.png

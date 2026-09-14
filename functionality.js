@@ -4,6 +4,7 @@ const furniture = [
         name: "Aster Lounge Chair",
         category: "seating",
         material: "Solid Oak",
+        image: "aster.png",
         description: "A comfortable handcrafted chair with a simple, timeless frame."
     },
     {
@@ -11,6 +12,7 @@ const furniture = [
         name: "Meadow Dining Table",
         category: "tables",
         material: "Walnut",
+        image: "meadow.png",
         description: "A sturdy dining table crafted for everyday family gatherings."
     },
     {
@@ -18,6 +20,7 @@ const furniture = [
         name: "Workshop Sideboard",
         category: "storage",
         material: "Oak & Brass",
+         image: "sideboard.png",
         description: "Elegant storage with practical space for dining and living areas."
     },
     {
@@ -25,6 +28,7 @@ const furniture = [
         name: "Ridge Armchair",
         category: "seating",
         material: "Ash Wood",
+         image: "ridge.png",
         description: "A compact handcrafted armchair combining clean lines and comfort."
     },
     {
@@ -32,6 +36,7 @@ const furniture = [
         name: "Foundry Coffee Table",
         category: "tables",
         material: "Reclaimed Wood",
+         image: "foundry.png",
         description: "A characterful coffee table made from carefully selected reclaimed timber."
     },
     {
@@ -39,6 +44,7 @@ const furniture = [
         name: "Hearth Bookcase",
         category: "storage",
         material: "Pine",
+         image: "hearth.png",
         description: "Open shelving designed for books, plants and decorative pieces."
     }
 ];
@@ -65,12 +71,12 @@ function createFurnitureCard(item) {
     imageArea.className = "furniture-image";
     imageArea.setAttribute("aria-hidden", "true");
 
-    const furnitureShape = document.createElement("div");
-    furnitureShape.className = "furniture-shape";
-    furnitureShape.textContent = item.name;
+    const image = document.createElement("img");
+     image.src = item.image;
+     image.alt = item.name;
+     image.className = "furniture-photo";
 
-    imageArea.appendChild(furnitureShape);
-
+    imageArea.appendChild(image);
 
     const content = document.createElement("div");
     content.className = "furniture-content";
